@@ -1,11 +1,12 @@
-/**************************************************************************************************
- * Copyright (c) 2024 Calypso Networks Association https://calypsonet.org/                        *
- *                                                                                                *
- * This program and the accompanying materials are made available under the                       *
- * terms of the MIT License which is available at https://opensource.org/licenses/MIT.            *
- *                                                                                                *
- * SPDX-License-Identifier: MIT                                                                   *
- **************************************************************************************************/
+/******************************************************************************
+ * Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/    *
+ *                                                                            *
+ * This program and the accompanying materials are made available under the   *
+ * terms of the MIT License which is available at                             *
+ * https://opensource.org/licenses/MIT.                                       *
+ *                                                                            *
+ * SPDX-License-Identifier: MIT                                               *
+ ******************************************************************************/
 
 #pragma once
 
@@ -23,7 +24,8 @@ namespace certificate {
 namespace spi {
 
 /**
- * SPI dedicated to the creation of card certificates from raw data stored on a card.
+ * SPI dedicated to the creation of card certificates from raw data stored on a
+ * card.
  *
  * @since 0.2.0
  */
@@ -38,14 +40,16 @@ public:
     virtual uint8_t getCertificateType() const = 0;
 
     /**
-     * Parses the given card output data and creates a new card certificate instance.
+     * Parses the given card output data and creates a new card certificate
+     * instance.
      *
      * <p>The first byte of the provided byte array is the certificate type.
      *
-     * @param cardOutputData A byte array containing the card certificate as stored on the card (316
-     *     bytes).
+     * @param cardOutputData A byte array containing the card certificate as
+     * stored on the card (316 bytes).
      * @return A non-null reference.
-     * @throws CertificateValidationException If the provided certificate has an unsupported format.
+     * @throws CertificateValidationException If the provided certificate has an
+     * unsupported format.
      * @since 0.2.0
      */
     virtual std::shared_ptr<CardCertificateSpi>

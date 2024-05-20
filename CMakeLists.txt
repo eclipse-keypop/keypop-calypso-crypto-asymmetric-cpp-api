@@ -1,17 +1,21 @@
-# *************************************************************************************************
-# Copyright (c) 2024 Calypso Networks Association https://calypsonet.org/                         *
-#                                                                                                 *
-# This program and the accompanying materials are made available under the                        *
-# terms of the MIT License which is available at https://opensource.org/licenses/MIT.             *
-#                                                                                                 *
-# SPDX-License-Identifier: MIT                                                                    *
-# *************************************************************************************************/
+# *****************************************************************************
+# Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/     *
+#                                                                             *
+# This program and the accompanying materials are made available under the    *
+# terms of the MIT License which is available at                              *
+# https://opensource.org/licenses/MIT.                                        *
+#                                                                             *
+# SPDX-License-Identifier: MIT                                                *
+# *****************************************************************************/
 
 CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
 
 PROJECT(KeypopCalypsoCryptoAsymmetricCppApi
         VERSION 0.2.0
-        C CXX)
+        LANGUAGES C CXX)
+
+# Uncomment and modify when preparing a release candidate
+SET(RC_VERSION "1")
 
 SET(PACKAGE_NAME "keypop-calypso-crypto-asymmetric-cpp-api")
 SET(PACKAGE_VERSION ${CMAKE_PROJECT_VERSION})

@@ -15,6 +15,7 @@
 #include <vector>
 
 #include "keypop/calypso/crypto/asymmetric/certificate/spi/CaCertificateContentSpi.hpp"
+#include "keypop/calypso/crypto/asymmetric/certificate/spi/CardPublicKeySpi.hpp"
 
 namespace keypop {
 namespace calypso {
@@ -24,16 +25,40 @@ namespace certificate {
 namespace spi {
 
 /**
- * SPI dedicated to Primary Certification Authority (PCA) certificate
- * management.
+ * SPI dedicated to card certificate management.
  *
  * @since 0.2.0
  */
-class PcaCertificateSpi {
+class CardCertificateSpi {
 public:
     /**
+     * Retrieves the reference of the issuer's public key as a byte array.
+     *
+     * @return A non-empty byte array.
+     * @since 0.2.0
+     */
+    virtual const std::vector<uint8_t>& getIssuerPublicKeyReference() const = 0;
+
+    /**
+     * Retrieves the AID of the autonomous application of the card as a byte
+     * array ranging from 5 to 16 bytes.
+     *
+     * @return A non-empty byte array.
+     * @since 0.2.0
+     */
+    virtual const std::vector<uint8_t>& getCardAid() const = 0;
+
+    /**
+     * Retrieves the serial number of the card as 8-byte byte array.
+     *
+     * @return A non-empty byte array.
+     * @since 0.2.0
+     */
+    virtual const std::vector<uint8_t>& getCardSerialNumber() const = 0;
+
+    /**
      * Verifies the certificate signature and other relevant fields, then
-     * returns the certificate content.
+     * returns the public key.
      *
      * <p>This method performs a comprehensive validation of the certificate,
      * including but not limited to checking the validity of the signature. It
@@ -43,8 +68,8 @@ public:
      * properly signed by the issuer but also conforms to the expected standards
      * and requirements.
      *
-     * <p>Note: The certificate is expected to be self-signed in this context.
-     *
+     * @param issuerCertificateContent The issuer certificate content to be used
+     * for signature verification.
      * @return A non-null reference.
      * @throw CertificateValidationException If the certificate is invalid,
      * expired, revoked, or fails any other validation checks.
@@ -52,8 +77,10 @@ public:
      * cryptographic computations.
      * @since 0.2.0
      */
-    virtual const std::shared_ptr<CaCertificateContentSpi>
-    checkCertificateAndGetContent() const = 0;
+    virtual const std::shared_ptr<CardPublicKeySpi>
+    checkCertificateAndGetPublicKey(
+        const std::shared_ptr<CaCertificateContentSpi> issuerCertificateContent)
+        = 0;
 };
 
 } /* namespace spi */
