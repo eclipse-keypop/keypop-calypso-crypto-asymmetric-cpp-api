@@ -33,7 +33,8 @@ public:
      * @return A non-null reference.
      * @since 0.2.0
      */
-    virtual std::shared_ptr<AsymmetricCryptoCardTransactionManagerSpi> createCardTransactionManager() const = 0;
+    virtual std::shared_ptr<AsymmetricCryptoCardTransactionManagerSpi>
+    createCardTransactionManager() const = 0;
 };
 
 } /* namespace spi */

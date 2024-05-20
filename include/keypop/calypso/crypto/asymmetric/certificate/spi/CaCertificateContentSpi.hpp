@@ -10,6 +10,7 @@
 #pragma once
 
 #include <cstdint>
+#include <memory>
 #include <vector>
 
 #include "keypop/calypso/crypto/asymmetric/certificate/spi/cpp/PublicKey.hpp"
@@ -58,7 +59,7 @@ public:
      * @return 0 if the validity start date is not defined.
      * @since 0.2.0
      */
-    virtual long getStartDate() const = 0;
+    virtual uint64_t getStartDate() const = 0;
 
     /**
      * Returns the validity end date of the certificate in long format.
@@ -71,7 +72,7 @@ public:
      * @return 0 if the validity end date is not defined.
      * @since 0.2.0
      */
-    virtual long getEndDate() const = 0;
+    virtual uint64_t getEndDate() const = 0;
 
     /**
      * Indicates if the AID has to be checked.

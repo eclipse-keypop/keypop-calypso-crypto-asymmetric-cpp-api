@@ -9,6 +9,7 @@
 
 #pragma once
 
+#include <memory>
 #include <stdexcept>
 #include <string>
 
@@ -32,8 +33,8 @@ public:
      * @param message Message to identify the exception context.
      * @since 0.2.0
      */
-    CertificateValidationException(const std::string& message) : std::exception()
-    {
+    explicit CertificateValidationException(const std::string& message)
+    : std::exception() {
         (void)message;
     }
 
@@ -44,10 +45,9 @@ public:
      * @param cause The cause.
      * @since 0.2.0
      */
-    CertificateValidationException(const std::string& message, 
-                                   const std::shared_ptr<std::exception> cause)
-    : std::exception(*cause)
-    {
+    CertificateValidationException(
+        const std::string& message, const std::shared_ptr<std::exception> cause)
+    : std::exception(*cause) {
         (void)message;
     }
 };

@@ -10,6 +10,7 @@
 #pragma once
 
 #include <cstdint>
+#include <memory>
 #include <vector>
 
 #include "keypop/calypso/crypto/asymmetric/certificate/spi/CaCertificateContentSpi.hpp"
@@ -59,9 +60,9 @@ public:
      *
      * <p>This method performs a comprehensive validation of the certificate, including but not
      * limited to checking the validity of the signature. It also verifies other essential fields of
-     * the certificate, such as the validity period, the issuer and subject details, and any relevant
-     * constraints or extensions. The method ensures the certificate is not only properly signed by
-     * the issuer but also conforms to the expected standards and requirements.
+     * the certificate, such as the validity period, the issuer and subject details, and any
+     * relevant constraints or extensions. The method ensures the certificate is not only properly
+     * signed by the issuer but also conforms to the expected standards and requirements.
      *
      * @param issuerCertificateContent The issuer certificate content to be used for signature
      *        verification.
@@ -73,7 +74,8 @@ public:
      * @since 0.2.0
      */
     virtual const std::shared_ptr<CardPublicKeySpi> checkCertificateAndGetPublicKey(
-        const std::shared_ptr<CaCertificateContentSpi> issuerCertificateContent) = 0;
+        const std::shared_ptr<CaCertificateContentSpi> issuerCertificateContent)
+        = 0;
 };
 
 } /* namespace spi */

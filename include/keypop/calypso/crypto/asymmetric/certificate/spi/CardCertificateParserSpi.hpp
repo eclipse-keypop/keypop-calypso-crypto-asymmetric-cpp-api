@@ -10,6 +10,7 @@
 #pragma once
 
 #include <cstdint>
+#include <memory>
 #include <vector>
 
 #include "keypop/calypso/crypto/asymmetric/certificate/spi/CardCertificateSpi.hpp"
@@ -47,8 +48,8 @@ public:
      * @throws CertificateValidationException If the provided certificate has an unsupported format.
      * @since 0.2.0
      */
-    virtual std::shared_ptr<CardCertificateSpi> parseCertificate(
-        const std::vector<uint8_t>& cardOutputData) const = 0;
+    virtual std::shared_ptr<CardCertificateSpi>
+    parseCertificate(const std::vector<uint8_t>& cardOutputData) const = 0;
 };
 
 } /* namespace spi */

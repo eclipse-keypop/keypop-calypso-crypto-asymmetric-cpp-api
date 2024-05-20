@@ -42,9 +42,9 @@ public:
      *
      * <p>This method performs a comprehensive validation of the certificate, including but not
      * limited to checking the validity of the signature. It also verifies other essential fields of
-     * the certificate, such as the validity period, the issuer and subject details, and any relevant
-     * constraints or extensions. The method ensures the certificate is not only properly signed by
-     * the issuer but also conforms to the expected standards and requirements.
+     * the certificate, such as the validity period, the issuer and subject details, and any
+     * relevant constraints or extensions. The method ensures the certificate is not only properly
+     * signed by the issuer but also conforms to the expected standards and requirements.
      *
      * @param issuerCertificateContent The issuer certificate content to be used for signature
      *        verification.
@@ -55,8 +55,9 @@ public:
      *        computations.
      * @since 0.2.0
      */
-    virtual const CaCertificateContentSpi& checkCertificateAndGetContent(
-        const CaCertificateContentSpi& issuerCertificateContent) = 0;
+    virtual const CaCertificateContentSpi&
+    checkCertificateAndGetContent(const CaCertificateContentSpi& issuerCertificateContent)
+        = 0;
 };
 
 } /* namespace spi */
