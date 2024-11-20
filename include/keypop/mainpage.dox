@@ -1,0 +1,51 @@
+/**
+ * @mainpage Keypop Calypso Crypto Asymmetric C++ API Documentation
+ *
+ * @section overview Overview
+ *
+ * The Keypop Calypso Crypto Asymmetric C++ API defines interfaces for asymmetric cryptographic
+ * operations and PKI certificate management in Calypso cards.
+ *
+ * @section architecture Architecture & Components
+ *
+ * @subsection certificate_management Certificate Management
+ *
+ * - keypop::calypso::crypto::asymmetric::certificate::spi::PcaCertificateSpi
+ *   Primary CA certificate management
+ *
+ * - keypop::calypso::crypto::asymmetric::certificate::spi::CaCertificateSpi
+ *   CA certificate management
+ *
+ * - keypop::calypso::crypto::asymmetric::certificate::spi::CaCertificateContentSpi
+ *   CA certificate content access
+ *
+ * - keypop::calypso::crypto::asymmetric::certificate::spi::CardCertificateSpi
+ *   Card certificate management
+ *
+ * - keypop::calypso::crypto::asymmetric::certificate::spi::CardPublicKeySpi
+ *   Card public key access
+ *
+ * @subsection certificate_parsing Certificate Parsing
+ *
+ * - keypop::calypso::crypto::asymmetric::certificate::spi::CaCertificateParserSpi
+ *   CA certificate parsing from card data
+ *
+ * - keypop::calypso::crypto::asymmetric::certificate::spi::CardCertificateParserSpi
+ *   Card certificate parsing from card data
+ *
+ * @subsection transactions PKI Transactions
+ *
+ * - keypop::calypso::crypto::asymmetric::transaction::spi::AsymmetricCryptoCardTransactionManagerFactorySpi
+ *   Factory for transaction managers
+ *
+ * - keypop::calypso::crypto::asymmetric::transaction::spi::AsymmetricCryptoCardTransactionManagerSpi
+ *   PKI-based card transaction management
+ *
+ * @section exceptions Exception Handling
+ *
+ * - keypop::calypso::crypto::asymmetric::AsymmetricCryptoException
+ *   Generic cryptographic operation errors
+ *
+ * - keypop::calypso::crypto::asymmetric::certificate::CertificateValidationException
+ *   Certificate validation errors
+ */
