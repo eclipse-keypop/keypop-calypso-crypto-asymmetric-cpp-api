@@ -1,3 +1,4 @@
 | Version | Documents |
 |:---:|---|
+| 0.2.0-rc1-SNAPSHOT | [API documentation](0.2.0-rc1-SNAPSHOT) |
 | 0.2.0-SNAPSHOT | [API documentation](0.2.0-SNAPSHOT) |
