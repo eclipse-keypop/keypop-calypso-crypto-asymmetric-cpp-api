@@ -1,11 +1,12 @@
-/**************************************************************************************************
- * Copyright (c) 2024 Calypso Networks Association https://calypsonet.org/                        *
- *                                                                                                *
- * This program and the accompanying materials are made available under the                       *
- * terms of the MIT License which is available at https://opensource.org/licenses/MIT.            *
- *                                                                                                *
- * SPDX-License-Identifier: MIT                                                                   *
- **************************************************************************************************/
+/******************************************************************************
+ * Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/    *
+ *                                                                            *
+ * This program and the accompanying materials are made available under the   *
+ * terms of the MIT License which is available at                             *
+ * https://opensource.org/licenses/MIT.                                       *
+ *                                                                            *
+ * SPDX-License-Identifier: MIT                                               *
+ ******************************************************************************/
 
 #pragma once
 
@@ -19,11 +20,12 @@ namespace crypto {
 namespace asymmetric {
 
 /**
- * Indicates that an error occurred when processing a asymmetric cryptographic operation.
+ * Indicates that an error occurred when processing a asymmetric cryptographic
+ * operation.
  *
  * @since 0.2.0
  */
-class AsymmetricCryptoException final : std::exception {
+class AsymmetricCryptoException final : public std::exception {
 public:
     /**
      * @param message The message to identify the exception context.

@@ -1,15 +1,18 @@
-/**************************************************************************************************
- * Copyright (c) 2024 Calypso Networks Association https://calypsonet.org/                        *
- *                                                                                                *
- * This program and the accompanying materials are made available under the                       *
- * terms of the MIT License which is available at https://opensource.org/licenses/MIT.            *
- *                                                                                                *
- * SPDX-License-Identifier: MIT                                                                   *
- **************************************************************************************************/
+/******************************************************************************
+ * Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/    *
+ *                                                                            *
+ * This program and the accompanying materials are made available under the   *
+ * terms of the MIT License which is available at                             *
+ * https://opensource.org/licenses/MIT.                                       *
+ *                                                                            *
+ * SPDX-License-Identifier: MIT                                               *
+ ******************************************************************************/
 
 #pragma once
 
 #include <cstdint>
+#include <memory>
+#include <string>
 #include <vector>
 
 #include "keypop/calypso/crypto/asymmetric/certificate/spi/CaCertificateContentSpi.hpp"
@@ -37,26 +40,29 @@ public:
     virtual const std::vector<uint8_t>& getIssuerPublicKeyReference() const = 0;
 
     /**
-     * Verifies the certificate signature and other relevant fields, then returns the certificate
-     * content.
+     * Verifies the certificate signature and other relevant fields, then
+     * returns the certificate content.
      *
-     * <p>This method performs a comprehensive validation of the certificate, including but not
-     * limited to checking the validity of the signature. It also verifies other essential fields of
-     * the certificate, such as the validity period, the issuer and subject details, and any
-     * relevant constraints or extensions. The method ensures the certificate is not only properly
-     * signed by the issuer but also conforms to the expected standards and requirements.
+     * <p>This method performs a comprehensive validation of the certificate,
+     * including but not limited to checking the validity of the signature. It
+     * also verifies other essential fields of the certificate, such as the
+     * validity period, the issuer and subject details, and any relevant
+     * constraints or extensions. The method ensures the certificate is not only
+     * properly signed by the issuer but also conforms to the expected standards
+     * and requirements.
      *
-     * @param issuerCertificateContent The issuer certificate content to be used for signature
-     *        verification.
+     * @param issuerCertificateContent The issuer certificate content to be used
+     * for signature verification.
      * @return A non-null reference.
-     * @throw CertificateValidationException If the certificate is invalid, expired, revoked, or
-     *        fails any other validation checks.
-     * @throw AsymmetricCryptoException If a technical error occurs during the cryptographic
-     *        computations.
+     * @throw CertificateValidationException If the certificate is invalid,
+     * expired, revoked, or fails any other validation checks.
+     * @throw AsymmetricCryptoException If a technical error occurs during the
+     * cryptographic computations.
      * @since 0.2.0
      */
-    virtual const CaCertificateContentSpi&
-    checkCertificateAndGetContent(const CaCertificateContentSpi& issuerCertificateContent)
+    virtual std::shared_ptr<CaCertificateContentSpi>
+    checkCertificateAndGetContent(
+        std::shared_ptr<CaCertificateContentSpi> issuerCertificateContent)
         = 0;
 };
 

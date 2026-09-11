@@ -1,11 +1,12 @@
-/**************************************************************************************************
- * Copyright (c) 2024 Calypso Networks Association https://calypsonet.org/                        *
- *                                                                                                *
- * This program and the accompanying materials are made available under the                       *
- * terms of the MIT License which is available at https://opensource.org/licenses/MIT.            *
- *                                                                                                *
- * SPDX-License-Identifier: MIT                                                                   *
- **************************************************************************************************/
+/******************************************************************************
+ * Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/    *
+ *                                                                            *
+ * This program and the accompanying materials are made available under the   *
+ * terms of the MIT License which is available at                             *
+ * https://opensource.org/licenses/MIT.                                       *
+ *                                                                            *
+ * SPDX-License-Identifier: MIT                                               *
+ ******************************************************************************/
 
 #pragma once
 
@@ -23,7 +24,8 @@ namespace certificate {
 namespace spi {
 
 /**
- * SPI dedicated to the creation of CA certificates from raw data stored on a card.
+ * SPI dedicated to the creation of CA certificates from raw data stored on a
+ * card.
  *
  * @since 0.2.0
  */
@@ -38,13 +40,16 @@ public:
     virtual uint8_t getCertificateType() const = 0;
 
     /**
-     * Parses the given card output data and creates a new CA certificate instance.
+     * Parses the given card output data and creates a new CA certificate
+     * instance.
      *
      * <p>The first byte of the provided byte array is the certificate type.
      *
-     * @param cardOutputData A byte array containing the CA certificate as stored on the card.
+     * @param cardOutputData A byte array containing the CA certificate as
+     * stored on the card.
      * @return A non-null reference.
-     * @throw CertificateValidationException If the provided certificate has an unsupported format.
+     * @throw CertificateValidationException If the provided certificate has an
+     * unsupported format.
      * @since 0.2.0
      */
     virtual std::shared_ptr<CaCertificateSpi>

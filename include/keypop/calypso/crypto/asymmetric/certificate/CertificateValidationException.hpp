@@ -1,11 +1,12 @@
-/**************************************************************************************************
- * Copyright (c) 2024 Calypso Networks Association https://calypsonet.org/                        *
- *                                                                                                *
- * This program and the accompanying materials are made available under the                       *
- * terms of the MIT License which is available at https://opensource.org/licenses/MIT.            *
- *                                                                                                *
- * SPDX-License-Identifier: MIT                                                                   *
- **************************************************************************************************/
+/******************************************************************************
+ * Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/    *
+ *                                                                            *
+ * This program and the accompanying materials are made available under the   *
+ * terms of the MIT License which is available at                             *
+ * https://opensource.org/licenses/MIT.                                       *
+ *                                                                            *
+ * SPDX-License-Identifier: MIT                                               *
+ ******************************************************************************/
 
 #pragma once
 
@@ -22,8 +23,8 @@ namespace certificate {
 /**
  * Indicates an issue encountered during the certificate validation.
  *
- * <p>This exception can be triggered by various issues such as an invalid signature or incorrect
- * metadata values within the certificate.
+ * <p>This exception can be triggered by various issues such as an invalid
+ * signature or incorrect metadata values within the certificate.
  *
  * @since 0.2.0
  */

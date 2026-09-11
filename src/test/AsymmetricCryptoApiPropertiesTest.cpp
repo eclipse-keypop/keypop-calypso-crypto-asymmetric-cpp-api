@@ -1,11 +1,12 @@
-/**************************************************************************************************
- * Copyright (c) 2024 Calypso Networks Association https://calypsonet.org/                        *
- *                                                                                                *
- * This program and the accompanying materials are made available under the                       *
- * terms of the MIT License which is available at https://opensource.org/licenses/MIT.            *
- *                                                                                                *
- * SPDX-License-Identifier: MIT                                                                   *
- **************************************************************************************************/
+/******************************************************************************
+ * Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/    *
+ *                                                                            *
+ * This program and the accompanying materials are made available under the   *
+ * terms of the MIT License which is available at                             *
+ * https://opensource.org/licenses/MIT.                                       *
+ *                                                                            *
+ * SPDX-License-Identifier: MIT                                               *
+ ******************************************************************************/
 
 #include <regex>
 
@@ -14,7 +15,8 @@
 
 #include "keypop/calypso/crypto/asymmetric/AsymmetricCryptoApiProperties.hpp"
 
-using keypop::calypso::crypto::asymmetric::AsymmetricCryptoApiProperties_VERSION;
+using keypop::calypso::crypto::asymmetric::
+    AsymmetricCryptoApiProperties_VERSION;
 
 TEST(AsymmetricCryptoApiPropertiesTest, versionIsCorrectlyWritten) {
     const std::string& apiVersion = AsymmetricCryptoApiProperties_VERSION;

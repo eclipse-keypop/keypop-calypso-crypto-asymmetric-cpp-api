@@ -1,11 +1,12 @@
-/**************************************************************************************************
- * Copyright (c) 2024 Calypso Networks Association https://calypsonet.org/                        *
- *                                                                                                *
- * This program and the accompanying materials are made available under the                       *
- * terms of the MIT License which is available at https://opensource.org/licenses/MIT.            *
- *                                                                                                *
- * SPDX-License-Identifier: MIT                                                                   *
- **************************************************************************************************/
+/******************************************************************************
+ * Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/    *
+ *                                                                            *
+ * This program and the accompanying materials are made available under the   *
+ * terms of the MIT License which is available at                             *
+ * https://opensource.org/licenses/MIT.                                       *
+ *                                                                            *
+ * SPDX-License-Identifier: MIT                                               *
+ ******************************************************************************/
 
 #pragma once
 
@@ -51,10 +52,11 @@ public:
     /**
      * Returns the validity start date of the certificate in long format.
      *
-     * <p>The date is represented in the format 0xYYYYMMDD, where YYYY is the four-digit year, MM is
-     * the two-digit month, and DD is the two-digit day.
+     * <p>The date is represented in the format 0xYYYYMMDD, where YYYY is the
+     * four-digit year, MM is the two-digit month, and DD is the two-digit day.
      *
-     * <p>If the validity start date is not defined or available, the method returns 0.
+     * <p>If the validity start date is not defined or available, the method
+     * returns 0.
      *
      * @return 0 if the validity start date is not defined.
      * @since 0.2.0
@@ -64,10 +66,11 @@ public:
     /**
      * Returns the validity end date of the certificate in long format.
      *
-     * <p>The date is represented in the format 0xYYYYMMDD, where YYYY is the four-digit year, MM is
-     * the two-digit month, and DD is the two-digit day.
+     * <p>The date is represented in the format 0xYYYYMMDD, where YYYY is the
+     * four-digit year, MM is the two-digit month, and DD is the two-digit day.
      *
-     * <p>If the validity end date is not defined or available, the method returns 0.
+     * <p>If the validity end date is not defined or available, the method
+     * returns 0.
      *
      * @return 0 if the validity end date is not defined.
      * @since 0.2.0
@@ -101,15 +104,18 @@ public:
     /**
      * Indicates if the certificate can be used to authenticate CA certificates.
      *
-     * @return true if the certificate can be used to authenticate CA certificates.
+     * @return true if the certificate can be used to authenticate CA
+     * certificates.
      * @since 0.2.0
      */
     virtual bool isCaCertificatesAuthenticationAllowed() const = 0;
 
     /**
-     * Indicates if the certificate can be used to authenticate card certificates.
+     * Indicates if the certificate can be used to authenticate card
+     * certificates.
      *
-     * @return true if the certificate can be used to authenticate card certificates.
+     * @return true if the certificate can be used to authenticate card
+     * certificates.
      * @since 0.2.0
      */
     virtual bool isCardCertificatesAuthenticationAllowed() const = 0;
