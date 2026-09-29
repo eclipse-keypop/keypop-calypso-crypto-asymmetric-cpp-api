@@ -5,10 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Keypop Calypso Crypto Asymmetric C++ API 0.2.0: keypop::calypso::crypto::asymmetric::certificate::spi::PcaCertificateSpi Class Reference</title>
+<title>Keypop Calypso Crypto Asymmetric C++ API - 0.2.0: keypop::calypso::crypto::asymmetric::certificate::spi::PcaCertificateSpi Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,9 +26,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.svg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Keypop Calypso Crypto Asymmetric C++ API 0.2.0
+   <div id="projectname">Keypop Calypso Crypto Asymmetric C++ API - 0.2.0
    </div>
-   <div id="projectbrief">Reference Calypso Crypto Asymmetric API for C++</div>
+   <div id="projectbrief">Component of the Keypop C++ API</div>
   </td>
  </tr>
  </tbody>
@@ -48,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classkeypop_1_1calypso_1_1crypto_1_1asymmetric_1_1certificate_1_1spi_1_1_pca_certificate_spi.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,11 +83,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacekeypop.html">keypop</a></li><li class="navelem"><a class="el" href="namespacekeypop_1_1calypso.html">calypso</a></li><li class="navelem"><a class="el" href="namespacekeypop_1_1calypso_1_1crypto.html">crypto</a></li><li class="navelem"><a class="el" href="namespacekeypop_1_1calypso_1_1crypto_1_1asymmetric.html">asymmetric</a></li><li class="navelem"><a class="el" href="namespacekeypop_1_1calypso_1_1crypto_1_1asymmetric_1_1certificate.html">certificate</a></li><li class="navelem"><a class="el" href="namespacekeypop_1_1calypso_1_1crypto_1_1asymmetric_1_1certificate_1_1spi.html">spi</a></li><li class="navelem"><a class="el" href="classkeypop_1_1calypso_1_1crypto_1_1asymmetric_1_1certificate_1_1spi_1_1_pca_certificate_spi.html">PcaCertificateSpi</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -75,18 +91,22 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_pca_certificate_spi_8hpp_source.html">PcaCertificateSpi.hpp</a>&gt;</code></p>
+<p>SPI dedicated to Primary Certification Authority (PCA) certificate management.  
+ <a href="classkeypop_1_1calypso_1_1crypto_1_1asymmetric_1_1certificate_1_1spi_1_1_pca_certificate_spi.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_pca_certificate_spi_8hpp_source.html">keypop/calypso/crypto/asymmetric/certificate/spi/PcaCertificateSpi.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae3d69a79e102d09b0ffdb4617e912267"><td class="memItemLeft" align="right" valign="top">virtual const std::shared_ptr&lt; <a class="el" href="classkeypop_1_1calypso_1_1crypto_1_1asymmetric_1_1certificate_1_1spi_1_1_ca_certificate_content_spi.html">CaCertificateContentSpi</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkeypop_1_1calypso_1_1crypto_1_1asymmetric_1_1certificate_1_1spi_1_1_pca_certificate_spi.html#ae3d69a79e102d09b0ffdb4617e912267">checkCertificateAndGetContent</a> () const =0</td></tr>
+<tr class="memdesc:ae3d69a79e102d09b0ffdb4617e912267"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies the certificate signature and other relevant fields, then returns the certificate content.  <a href="classkeypop_1_1calypso_1_1crypto_1_1asymmetric_1_1certificate_1_1spi_1_1_pca_certificate_spi.html#ae3d69a79e102d09b0ffdb4617e912267">More...</a><br /></td></tr>
 <tr class="separator:ae3d69a79e102d09b0ffdb4617e912267"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >SPI dedicated to Primary Certification Authority (PCA) certificate management.</p>
+<div class="textblock"><p >SPI dedicated to Primary Certification Authority (PCA) certificate management. </p>
 <dl class="section since"><dt>Since</dt><dd>0.2.0 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_pca_certificate_spi_8hpp_source.html#l00030">30</a> of file <a class="el" href="_pca_certificate_spi_8hpp_source.html">PcaCertificateSpi.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_pca_certificate_spi_8hpp_source.html#l00032">32</a> of file <a class="el" href="_pca_certificate_spi_8hpp_source.html">PcaCertificateSpi.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae3d69a79e102d09b0ffdb4617e912267" name="ae3d69a79e102d09b0ffdb4617e912267"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae3d69a79e102d09b0ffdb4617e912267">&#9670;&nbsp;</a></span>checkCertificateAndGetContent()</h2>
@@ -110,14 +130,15 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Verifies the certificate signature and other relevant fields, then returns the certificate content.</p>
+
+<p>Verifies the certificate signature and other relevant fields, then returns the certificate content. </p>
 <p >This method performs a comprehensive validation of the certificate, including but not limited to checking the validity of the signature. It also verifies other essential fields of the certificate, such as the validity period, the issuer and subject details, and any relevant constraints or extensions. The method ensures the certificate is not only properly signed by the issuer but also conforms to the expected standards and requirements.</p>
 <p >Note: The certificate is expected to be self-signed in this context.</p>
 <dl class="section return"><dt>Returns</dt><dd>A non-null reference. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classkeypop_1_1calypso_1_1crypto_1_1asymmetric_1_1certificate_1_1_certificate_validation_exception.html">CertificateValidationException</a></td><td>If the certificate is invalid, expired, revoked, or fails any other validation checks. </td></tr>
-    <tr><td class="paramname"><a class="el" href="classkeypop_1_1calypso_1_1crypto_1_1asymmetric_1_1_asymmetric_crypto_exception.html">AsymmetricCryptoException</a></td><td>If a technical error occurs during the cryptographic computations. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classkeypop_1_1calypso_1_1crypto_1_1asymmetric_1_1certificate_1_1_certificate_validation_exception.html" title="Indicates an issue encountered during the certificate validation.">CertificateValidationException</a></td><td>If the certificate is invalid, expired, revoked, or fails any other validation checks. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classkeypop_1_1calypso_1_1crypto_1_1asymmetric_1_1_asymmetric_crypto_exception.html" title="Indicates that an error occurred when processing a asymmetric cryptographic operation.">AsymmetricCryptoException</a></td><td>If a technical error occurs during the cryptographic computations. </td></tr>
   </table>
   </dd>
 </dl>
@@ -126,12 +147,16 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/github/workspace/include/keypop/calypso/crypto/asymmetric/certificate/spi/<a class="el" href="_pca_certificate_spi_8hpp_source.html">PcaCertificateSpi.hpp</a></li>
+<li>keypop/calypso/crypto/asymmetric/certificate/spi/<a class="el" href="_pca_certificate_spi_8hpp_source.html">PcaCertificateSpi.hpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacekeypop.html">keypop</a></li><li class="navelem"><a class="el" href="namespacekeypop_1_1calypso.html">calypso</a></li><li class="navelem"><a class="el" href="namespacekeypop_1_1calypso_1_1crypto.html">crypto</a></li><li class="navelem"><a class="el" href="namespacekeypop_1_1calypso_1_1crypto_1_1asymmetric.html">asymmetric</a></li><li class="navelem"><a class="el" href="namespacekeypop_1_1calypso_1_1crypto_1_1asymmetric_1_1certificate.html">certificate</a></li><li class="navelem"><a class="el" href="namespacekeypop_1_1calypso_1_1crypto_1_1asymmetric_1_1certificate_1_1spi.html">spi</a></li><li class="navelem"><a class="el" href="classkeypop_1_1calypso_1_1crypto_1_1asymmetric_1_1certificate_1_1spi_1_1_pca_certificate_spi.html">PcaCertificateSpi</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
 </body>
 </html>
