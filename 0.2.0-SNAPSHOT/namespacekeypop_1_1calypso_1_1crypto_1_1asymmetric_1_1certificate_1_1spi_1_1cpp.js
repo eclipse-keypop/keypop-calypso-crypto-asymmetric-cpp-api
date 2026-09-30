@@ -1,4 +1,0 @@
-var namespacekeypop_1_1calypso_1_1crypto_1_1asymmetric_1_1certificate_1_1spi_1_1cpp =
-[
-    [ "PublicKey", "classkeypop_1_1calypso_1_1crypto_1_1asymmetric_1_1certificate_1_1spi_1_1cpp_1_1_public_key.html", "classkeypop_1_1calypso_1_1crypto_1_1asymmetric_1_1certificate_1_1spi_1_1cpp_1_1_public_key" ]
-];
