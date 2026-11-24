@@ -11,7 +11,7 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
 
 PROJECT(KeypopCalypsoCryptoAsymmetricCppApi
-        VERSION 0.2.0
+        VERSION 0.2.1
         LANGUAGES C CXX)
 
 # Uncomment and modify when preparing a release candidate
