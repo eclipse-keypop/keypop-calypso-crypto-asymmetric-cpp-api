@@ -1,0 +1,5 @@
+var classkeypop_1_1calypso_1_1crypto_1_1asymmetric_1_1certificate_1_1_certificate_validation_exception =
+[
+    [ "CertificateValidationException", "classkeypop_1_1calypso_1_1crypto_1_1asymmetric_1_1certificate_1_1_certificate_validation_exception.html#a5cd1b85a12a57e4931fe2d29a95ec384", null ],
+    [ "CertificateValidationException", "classkeypop_1_1calypso_1_1crypto_1_1asymmetric_1_1certificate_1_1_certificate_validation_exception.html#a2cc3ab195806709d22f4480e9f07a28c", null ]
+];
